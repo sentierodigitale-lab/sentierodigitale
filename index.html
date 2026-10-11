@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sentiero Digitale aiuta le attività locali di Varese e provincia a presentarsi online con siti semplici e curati.">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>Sentiero Digitale — Il tuo spazio online, un passo alla volta</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f3ed;
+      --white: #fffefa;
+      --ink: #173b37;
+      --muted: #5e706b;
+      --green: #285b50;
+      --green-dark: #1c453e;
+      --lime: #d9e7a7;
+      --line: #d9ded5;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.6; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
+    .topbar { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 700; letter-spacing: -.03em; }
+    .mark { display: grid; place-items: center; width: 37px; height: 37px; border-radius: 50% 50% 50% 10%; background: var(--green); color: var(--lime); font-family: var(--serif); font-size: 21px; transform: rotate(-8deg); }
+    .brand span:last-child { transform: translateY(1px); }
+    .links { display: flex; align-items: center; gap: 27px; font-size: 14px; }
+    .links a { text-decoration: none; }
+    .links a:hover { text-decoration: underline; text-underline-offset: 5px; }
+    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; background: var(--green); color: white; text-decoration: none; font-weight: 650; transition: background .2s, transform .2s; }
+    .nav-cta { padding: 11px 18px; font-size: 14px; }
+    .button { padding: 14px 22px; }
+    .nav-cta:hover, .button:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .hero { display: grid; grid-template-columns: 1.12fr .88fr; gap: 62px; align-items: center; padding: 88px 0 92px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 20px; color: var(--green); font-size: 12px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.045em; }
+    h1 { max-width: 680px; margin-bottom: 22px; font-size: clamp(48px, 6.6vw, 78px); line-height: 1.02; }
+    h1 em { color: var(--green); font-weight: 400; }
+    .hero-copy { max-width: 500px; margin-bottom: 29px; color: var(--muted); font-size: 18px; }
+    .hero-note { margin: 15px 0 0; color: var(--muted); font-size: 13px; }
+    .art { position: relative; min-height: 405px; display: grid; place-items: center; overflow: hidden; border-radius: 46% 46% 16px 16px; background: #dce6d3; }
+    .sun { position: absolute; top: 47px; right: 59px; width: 90px; height: 90px; border-radius: 50%; background: #e7cc83; }
+    .hill { position: absolute; bottom: -88px; width: 120%; height: 245px; border-radius: 50% 50% 0 0; transform: rotate(-9deg); }
+    .hill.one { left: -23%; bottom: -89px; background: #9cb99e; }
+    .hill.two { right: -23%; bottom: -123px; background: #648d78; transform: rotate(13deg); }
+    .path { position: absolute; bottom: -70px; left: 45%; width: 120px; height: 255px; border-radius: 50%; border: 28px solid #f4ecd5; border-top-color: transparent; border-left-color: transparent; transform: rotate(24deg); }
+    .art-label { position: absolute; z-index: 2; top: 27px; left: 26px; padding: 9px 13px; border-radius: 999px; background: rgba(255,254,250,.8); color: var(--green-dark); font-size: 12px; }
+    .intro { padding: 80px 0; background: var(--white); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 36px; margin-bottom: 35px; }
+    h2 { max-width: 600px; margin-bottom: 0; font-size: clamp(36px, 4.7vw, 54px); line-height: 1.1; }
+    .section-head p { max-width: 350px; margin: 0; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { min-height: 235px; padding: 27px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+    .card-num { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-bottom: 29px; border-radius: 50%; background: var(--lime); color: var(--green-dark); font-family: var(--serif); }
+    h3 { margin-bottom: 9px; font-family: var(--serif); font-size: 24px; font-weight: 400; letter-spacing: -.02em; }
+    .card p { margin-bottom: 0; color: var(--muted); font-size: 15px; }
+    .approach { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; padding: 86px 0; }
+    .approach-copy { max-width: 420px; padding-top: 8px; color: var(--muted); }
+    .steps { border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .step-num { color: var(--green); font-family: var(--serif); font-size: 18px; }
+    .step strong { display: block; margin-bottom: 3px; font-size: 16px; }
+    .step p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+    .contact { padding: 73px 0; background: var(--green-dark); color: var(--white); }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .contact .eyebrow { color: var(--lime); }
+    .contact h2 { max-width: 640px; }
+    .contact p { max-width: 540px; margin: 14px 0 0; color: #d3dfd8; }
+    .contact .button { flex: 0 0 auto; background: var(--lime); color: var(--green-dark); }
+    .contact .button:hover { background: #e5efc4; }
+    footer { padding: 23px 0; color: var(--muted); font-size: 13px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+    footer a { text-underline-offset: 3px; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, 560px); }
+      .links { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 37px; padding: 63px 0; }
+      .art { min-height: 310px; }
+      .section-head, .contact-inner { align-items: flex-start; flex-direction: column; }
+      .section-head { gap: 18px; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: 0; }
+      .card-num { margin-bottom: 19px; }
+      .approach { grid-template-columns: 1fr; gap: 30px; padding: 64px 0; }
+      .contact { padding: 60px 0; }
+      .footer-inner { flex-direction: column; gap: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#" aria-label="Sentiero Digitale, pagina iniziale"><span class="mark">S</span><span>Sentiero Digitale</span></a>
+      <nav class="links" aria-label="Navigazione principale">
+        <a href="#servizi">Servizi</a>
+        <a href="#metodo">Come lavoriamo</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <a class="nav-cta" href="mailto:sentierodigitale@gmail.com">Parliamone</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="eyebrow">Web agency · Varese e provincia</p>
+        <h1>Il tuo spazio online, <em>un passo alla volta.</em></h1>
+        <p class="hero-copy">Aiuto le attività locali a presentarsi online con siti semplici, curati e facili da usare.</p>
+        <a class="button" href="mailto:sentierodigitale@gmail.com?subject=Parliamo%20del%20mio%20sito">Raccontami la tua idea <span aria-hidden="true">&nbsp;↗</span></a>
+        <p class="hero-note">Siti vetrina, negozi online e assistenza nel tempo.</p>
+      </div>
+      <div class="art" role="img" aria-label="Un sentiero che attraversa colline verdi verso il sole">
+        <span class="art-label">Un percorso chiaro, insieme</span>
+        <span class="sun"></span><span class="hill one"></span><span class="hill two"></span><span class="path"></span>
+      </div>
+    </section>
+
+    <section class="intro" id="servizi">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Cosa posso fare</p><h2>Strumenti semplici per farti trovare.</h2></div>
+          <p>Un sito chiaro aiuta le persone a capire cosa offri e come contattarti.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><span class="card-num">01</span><h3>Siti vetrina</h3><p>Servizi, orari e contatti raccolti in uno spazio chiaro, che si consulta bene anche dal telefono.</p></article>
+          <article class="card"><span class="card-num">02</span><h3>Negozi online</h3><p>Un modo semplice per presentare i tuoi prodotti e permettere ai clienti di acquistare online.</p></article>
+          <article class="card"><span class="card-num">03</span><h3>Manutenzione e assistenza</h3><p>Un aiuto per tenere il sito aggiornato e affrontare i piccoli problemi quotidiani.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap approach" id="metodo">
+      <div>
+        <p class="eyebrow">Come lavoriamo</p>
+        <h2>Passi chiari, fin dall’inizio.</h2>
+        <p class="approach-copy">Prima ascolto cosa ti serve. Poi definiamo insieme il lavoro, così sai cosa aspettarti in ogni fase.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="step-num">01</span><div><strong>Ci conosciamo</strong><p>Mi racconti la tua attività e cosa vuoi ottenere dal sito.</p></div></div>
+        <div class="step"><span class="step-num">02</span><div><strong>Prepariamo una proposta</strong><p>Mettiamo in ordine contenuti, pagine e prossimi passi.</p></div></div>
+        <div class="step"><span class="step-num">03</span><div><strong>Costruiamo insieme</strong><p>Rivedi la bozza e approvi il lavoro prima della realizzazione.</p></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contatti">
+      <div class="wrap contact-inner">
+        <div><p class="eyebrow">Il prossimo passo</p><h2>Hai un progetto in mente?</h2><p>Scrivimi due righe. Ti risponderò per capire insieme da dove partire.</p></div>
+        <a class="button" href="mailto:sentierodigitale@gmail.com?subject=Parliamo%20del%20mio%20sito">Scrivimi un’email <span aria-hidden="true">&nbsp;↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Sentiero Digitale · Daniele</span>
+      <a href="mailto:sentierodigitale@gmail.com">sentierodigitale@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
